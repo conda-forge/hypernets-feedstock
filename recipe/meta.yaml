@@ -1,5 +1,5 @@
 {% set name = "Hypernets" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 1ae7b4a264818592ede34e521294b7262d085bf2cfe143a593bd3a80fa0c385b
+  sha256: 6eb07e312dad6850259b4750269316ce393955d4786862d209b1e6fd1b55926a
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -53,7 +53,7 @@ about:
   home: https://github.com/DataCanvasIO/Hypernets
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'A General Automated Machine Learning framework.'
+  summary: A General Automated Machine Learning framework.
   description: |
     Hypernets is a general AutoML framework, based on which it can implement automatic
     optimization tools for various machine learning frameworks and libraries, including
