@@ -1,5 +1,5 @@
 {% set name = "Hypernets" %}
-{% set version = "0.2.3.2" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,14 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ee412fde54c2315a89b0a4f118e663d57cd24c4db9d6956d7323b3720333997e
+  sha256: 2d4879191441fd839ee0be345ea2010996b0da9b092559ca77b325cb4a61e9fb
 
 build:
   noarch: python
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
+  entry_points:
+    - hyperctl = hypernets.hyperctl.daemon:main
 
 requirements:
   host:
@@ -27,15 +29,19 @@ requirements:
     - lightgbm >=2.2.0
     - fsspec >=0.8.0
     - seaborn >=0.11.0
-    - six
-    - dask
-    - distributed
-    - dask-ml
     - pyarrow
     - ipython
     - traitlets
-    - featuretools >=0.23.0,<1.0.0
+    - featuretools >=0.23.0
     - python-geohash
+    - XlsxWriter >=3.0.2
+    - psutil
+    - joblib
+    - pyyaml
+    - paramiko
+    - requests
+    - tornado
+    - prettytable
     - pytest
 
 test:
