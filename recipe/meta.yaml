@@ -1,5 +1,5 @@
 {% set name = "Hypernets" %}
-{% set version = "0.2.5.5" %}
+{% set version = "0.2.5.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d9e1dd49a4b48801685f7d19559f7206194f3388ee1e11cb00404959061c3ece
+  sha256: 08c79485470819c519a5ee226dc621cab849cb462b82a015d06dc4e297433d54
 
 build:
   noarch: python
