@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 9d46c775cfdc8fff2b5f60bf9eea65d8bcf984f8f112a873f1699ce758236a34
+  sha256: 0cc590ad9563f3fee29b85609f8a384edd7438a38f64e845eedce6f88a744332
 
 build:
   noarch: python
