@@ -1,5 +1,5 @@
 {% set name = "Hypernets" %}
-{% set version = "0.2.5.7" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 5b5c791ecd3324e19fafd9c260bc38cffa4d91dd4b15dd3938e831f2cdb6a74a
+  sha256: ab5862813f749248291991a454aeab2dbffe771d93c90ba396b0269e03c292e6
 
 build:
   noarch: python
@@ -26,14 +26,10 @@ requirements:
     - pandas >=0.25.3
     - scikit-learn >=0.22.1
     - scipy
-    - featuretools >=0.23.0
     - lightgbm >=2.2.0
     - fsspec >=0.8.0
-    - seaborn >=0.11.0
-    - pyarrow >=1.0.0
     - ipython
     - traitlets
-    - python-geohash
     - XlsxWriter >=3.0.2
     - psutil
     - joblib
@@ -42,6 +38,7 @@ requirements:
     - requests
     - tornado
     - prettytable
+    - tqdm
     - pytest
 
 test:
