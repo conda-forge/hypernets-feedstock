@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 79e5061044b098dcd4b41c0e892db8f7357a92c6ba2cc4db78dc6c8fac3880f3
+  sha256: 53e6432f780d5d6f16c18d1926e032d63854be63c50c14d36ba816c9437eb286
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - hyperctl = hypernets.hyperctl.daemon:main
