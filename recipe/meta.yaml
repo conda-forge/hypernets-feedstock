@@ -1,5 +1,5 @@
 {% set name = "Hypernets" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 53e6432f780d5d6f16c18d1926e032d63854be63c50c14d36ba816c9437eb286
+  sha256: 1a40690ca6f746db2df930bdd1b3dac428daef811d720abcfbcb04101d8e8d14
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - hyperctl = hypernets.hyperctl.daemon:main
