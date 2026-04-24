@@ -11,17 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - hyperctl = hypernets.hyperctl.daemon:main
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy >=1.16.5
     - pandas >=0.25.3
     - scikit-learn >=0.22.1
@@ -48,6 +48,7 @@ test:
     - hypernets.tests
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - python -m hypernets.examples.smoke_testing
